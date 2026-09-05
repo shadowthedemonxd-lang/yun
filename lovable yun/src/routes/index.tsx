@@ -5,15 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import heroSushi from "@/assets/image.png.asset.json";
-import tuna from "@/assets/image-2.png.asset.json";
-import plate from "@/assets/image-3.png.asset.json";
-import tunaRoll from "@/assets/image-4.png.asset.json";
-import rolls from "@/assets/image-5.png.asset.json";
-import chef from "@/assets/image-6.png.asset.json";
-import slate from "@/assets/image-7.png.asset.json";
-import kitchen from "@/assets/image-8.png.asset.json";
-import greenRoll from "@/assets/image-9.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,43 +32,43 @@ export const Route = createFileRoute("/")({
 const menu = [
   {
     name: "Zhu Tuna Crown",
-    img: heroSushi.url,
+    img: "/yun2.jpg",
     price: "$$",
     detail: "Bluefin tartare, avocado mousse, crisp nori, toasted sesame, yuzu soy",
   },
   {
     name: "Seared Tuna Tataki",
-    img: tuna.url,
+    img: "/yun.jpg",
     price: "$$$",
     detail: "Sesame crust, mango, daikon slaw, crispy shiso, ponzu emulsion",
   },
   {
     name: "Crimson Maki",
-    img: tunaRoll.url,
+    img: "/yun5.jpg",
     price: "$$",
     detail: "Tuna cloak, eel, avocado, chive, sweet soy glaze",
   },
   {
     name: "Golden Spring Rolls",
-    img: rolls.url,
+    img: "/yun6.jpg",
     price: "$",
     detail: "Chicken, glass noodle, shiitake, black vinegar dip",
   },
   {
     name: "Amber Ikura Bite",
-    img: slate.url,
+    img: "/yun7.jpg",
     price: "$$",
     detail: "Cured yolk, scallop, squid ink, aged mirin lacquer",
   },
   {
     name: "Jade Garden Roll",
-    img: greenRoll.url,
+    img: "/yun3.jpg",
     price: "$$",
     detail: "Soy paper, herb salad, cucumber ribbon, wasabi crème",
   },
 ];
 
-const gallery = [kitchen.url, chef.url, plate.url, slate.url, rolls.url, greenRoll.url];
+const gallery = ["/yun3.jpg", "/yun7.jpg", "/yun5.jpg", "/yun.jpg", "/yun6.jpg", "/yun2.jpg"];
 
 function Index() {
   const [sent, setSent] = useState(false);
@@ -87,7 +79,7 @@ function Index() {
       <section className="relative min-h-screen">
         <div className="absolute inset-0">
           <img
-            src={heroSushi.url}
+            src="/yun8.jpg"
             alt="Fusion sushi bite topped with tuna and sesame"
             className="h-full w-full scale-110 object-cover opacity-40 blur-[2px]"
           />
@@ -145,7 +137,7 @@ function Index() {
           <Reveal delay={150}>
             <div className="animate-float relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-[2.5rem] shadow-elegant">
               <img
-                src={tunaRoll.url}
+                src="/yun5.jpg"
                 alt="Crimson tuna maki roll plated at Yun"
                 className="h-full w-full object-cover"
               />
@@ -160,7 +152,7 @@ function Index() {
           <Reveal>
             <div className="overflow-hidden rounded-[2rem] shadow-elegant">
               <img
-                src={chef.url}
+                src="/yun7.jpg"
                 alt="Chef Ismael Zhu plating in the Yun kitchen"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -287,7 +279,7 @@ function Index() {
           <Reveal delay={120} className="flex flex-col gap-5">
             <div className="overflow-hidden rounded-[1.75rem]">
               <img
-                src={kitchen.url}
+                src="/yun3.jpg"
                 alt="Yun kitchen pass during service"
                 loading="lazy"
                 className="h-56 w-full object-cover"
